@@ -321,6 +321,35 @@ CONTRIBUTING.md
 
 ---
 
+# Gestion du projet
+
+Le développement suit une organisation inspirée des méthodes Agile.
+
+Le projet est découpé en plusieurs sprints correspondant aux différents paliers du sujet :
+
+- Sprint 0 : Initialisation du projet
+- Sprint 1 : Exploration des données et baseline
+- Sprint 2 : MLP
+- Sprint 3 : CNN
+- Sprint 4 : Application Flask
+- Sprint 5 : Finalisation et rendu
+
+Le suivi est réalisé à l'aide de :
+
+- GitHub Projects
+- GitHub Issues
+- GitHub Milestones
+- Pull Requests
+- Revue de code entre collaborateurs
+
+Les détails de la planification sont disponibles dans :
+
+```text
+docs/project_plan.md
+docs/sprints.md
+```
+--- 
+
 # Licence
 
 Ce projet est distribué sous licence MIT.
