@@ -218,3 +218,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Models
+*.keras
+*.h5
+
+# Data
+data/raw/*
+data/processed/*
+
+# Exceptions
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
