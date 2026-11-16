@@ -40,3 +40,4 @@ Décrire précisément ce qui doit être réalisé.
 
 - Sujet du projet
 - Documentation associée
+.
