@@ -1,8 +1,28 @@
 # Guide de contribution
 
-Merci de contribuer au projet **MNIST Digit Classifier**.
+Merci de contribuer au projet **Handwritten Digits Classifier**.
 
-L'objectif est de maintenir un projet propre, reproductible et facile à comprendre pour tous les membres de l'équipe.
+L'objectif est de maintenir un projet propre, reproductible, documenté et facile à comprendre pour tous les membres de l'équipe.
+
+---
+
+# Gestion du projet
+
+Le suivi du projet est réalisé à l'aide des outils GitHub suivants :
+
+- GitHub Projects
+- GitHub Issues
+- GitHub Milestones
+- Pull Requests
+
+Chaque tâche doit être associée à :
+
+- une Issue ;
+- une Milestone (Sprint) ;
+- un responsable ;
+- un statut dans le Kanban.
+
+Les développements doivent être réalisés à partir d'une Issue existante.
 
 ---
 
@@ -17,6 +37,7 @@ Le projet utilise les branches suivantes :
 | feature/* | Développement de nouvelles fonctionnalités |
 | fix/* | Correction de bugs |
 | docs/* | Mise à jour de la documentation |
+| ci/* | Configuration de l'intégration continue |
 | release/* | Préparation d'une version majeure |
 
 ---
@@ -34,6 +55,7 @@ feature/nom-fonctionnalite
 Exemples :
 
 ```text
+feature/exploration-mnist
 feature/baseline-sklearn
 feature/mlp-learning-rate
 feature/cnn-data-augmentation
@@ -63,7 +85,20 @@ Exemples :
 
 ```text
 docs/readme-update
-docs/project-structure
+docs/project-report
+```
+
+## Intégration continue
+
+```bash
+ci/nom-amelioration
+```
+
+Exemples :
+
+```text
+ci/add-github-actions
+ci/update-workflow
 ```
 
 ---
@@ -93,6 +128,12 @@ ou
 
 ```bash
 git checkout -b docs/nom-documentation
+```
+
+ou
+
+```bash
+git checkout -b ci/nom-amelioration
 ```
 
 ## 3. Développer la fonctionnalité
@@ -147,7 +188,7 @@ git add chemin/fichier.py
 
 ---
 
-## 6. Committer
+## 6. Réaliser un commit
 
 Les commits doivent suivre la convention définie ci-dessous.
 
@@ -176,8 +217,49 @@ La Pull Request doit :
 - décrire les changements réalisés ;
 - expliquer le problème résolu ;
 - indiquer les éventuels impacts ;
+- être associée à une ou plusieurs Issues ;
 - avoir des tests fonctionnels ;
 - être relue par un membre de l'équipe.
+
+---
+
+# Stratégie de fusion
+
+Les modifications sont intégrées via Pull Request.
+
+## Squash and Merge
+
+Méthode recommandée pour ce projet.
+
+Elle permet :
+
+- de conserver un historique clair ;
+- de regrouper plusieurs commits intermédiaires ;
+- de simplifier la lecture de l'historique Git.
+
+---
+
+## Rebase and Merge
+
+Peut être utilisé lorsque l'historique de la branche est déjà propre et cohérent.
+
+---
+
+## Merge Commit
+
+À éviter autant que possible afin de conserver un historique lisible.
+
+---
+
+## Règle du projet
+
+La stratégie recommandée est :
+
+```text
+Squash and Merge
+```
+
+sauf exception justifiée.
 
 ---
 
@@ -191,6 +273,27 @@ Après validation :
 
 ---
 
+# Fermeture des Issues
+
+Une Pull Request doit référencer les Issues concernées.
+
+Exemples :
+
+```text
+Closes #12
+Closes #15
+```
+
+ou
+
+```text
+Fixes #12
+```
+
+Les Issues seront alors fermées automatiquement après la fusion.
+
+---
+
 # Convention de commits
 
 Les messages de commit suivent la convention **Conventional Commits**.
@@ -201,22 +304,10 @@ Les messages de commit suivent la convention **Conventional Commits**.
 feat: ajout d'une fonctionnalité
 ```
 
-Exemple :
-
-```text
-feat: implement first cnn architecture
-```
-
 ## Correction
 
 ```text
 fix: correction d'un bug
-```
-
-Exemple :
-
-```text
-fix: correct image preprocessing
 ```
 
 ## Documentation
@@ -225,22 +316,10 @@ fix: correct image preprocessing
 docs: mise à jour de la documentation
 ```
 
-Exemple :
-
-```text
-docs: update installation guide
-```
-
 ## Tests
 
 ```text
 test: ajout ou modification de tests
-```
-
-Exemple :
-
-```text
-test: add flask endpoint tests
 ```
 
 ## Refactorisation
@@ -249,34 +328,16 @@ test: add flask endpoint tests
 refactor: amélioration interne sans changement fonctionnel
 ```
 
-Exemple :
-
-```text
-refactor: simplify training pipeline
-```
-
 ## Intégration continue
 
 ```text
-ci: modification des workflows github actions
-```
-
-Exemple :
-
-```text
-ci: add automated test workflow
+ci: modification des workflows GitHub Actions
 ```
 
 ## Maintenance
 
 ```text
 chore: tâches de maintenance ou configuration
-```
-
-Exemple :
-
-```text
-chore: configure pre-commit hooks
 ```
 
 ---
