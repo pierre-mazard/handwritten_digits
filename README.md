@@ -264,6 +264,58 @@ tensorflow.random.set_seed(SEED)
 
 ---
 
+# Méthodologie expérimentale
+
+Le projet suit strictement les consignes du sujet concernant la séparation des données.
+
+## Découpage des données
+
+La base MNIST contient :
+
+- 60 000 images initialement destinées à l'entraînement ;
+- 10 000 images de test.
+
+Les 60 000 images d'entraînement sont divisées en :
+
+```text
+Entraînement : 54 000 images
+Validation   : 6 000 images
+```
+
+Le jeu de test de 10 000 images est conservé séparément.
+
+---
+
+## Politique d'utilisation du jeu de test
+
+Conformément aux consignes du sujet :
+
+- le jeu de test n'est pas utilisé durant l'analyse exploratoire ;
+- le jeu de test n'est pas utilisé pour choisir les hyperparamètres ;
+- le jeu de test n'est pas utilisé pour comparer plusieurs architectures ;
+- le jeu de test n'est pas utilisé pour sélectionner le meilleur modèle.
+
+Toutes les décisions de conception reposent uniquement sur les ensembles :
+
+```text
+Entraînement
+Validation
+```
+
+Le jeu de test est réservé exclusivement à l'évaluation finale de chaque palier du projet.
+
+---
+
+## Prévention des fuites de données
+
+Afin de garantir une évaluation honnête des modèles :
+
+- les analyses exploratoires sont réalisées uniquement sur les données d'entraînement ;
+- les expérimentations sont évaluées sur l'ensemble de validation ;
+- le jeu de test reste inutilisé jusqu'à la validation finale des modèles.
+
+Cette méthodologie garantit l'absence de fuite de données et la validité scientifique des résultats obtenus.
+
 # Résultats
 
 ## Baseline Scikit-Learn

@@ -235,7 +235,9 @@ __pycache__/
 
 # Data
 data/raw/*
-data/processed/*
+data/processed/*.npy
+data/holdout/*.npy
+
 
 # Exceptions
 !data/raw/.gitkeep
