@@ -1,8 +1,0 @@
-{
-    "model": "LogisticRegressionCV",
-    "best_C": 0.3593813663804626,
-    "accuracy": 0.9221666666666667,
-    "precision_macro": 0.9214815790140147,
-    "recall_macro": 0.9212008706372824,
-    "f1_macro": 0.9212802519008771
-}
